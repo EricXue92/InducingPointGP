@@ -11,13 +11,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def get_params():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-logging', type=int, default=0)
     parser.add_argument('-batch_size', type=int, default=128)
     parser.add_argument('-num_samples', type=int, default=200)
     parser.add_argument('-num_inducing_points', type=int, default=6)
     parser.add_argument('-x_noise_std', type=float, default=0.01)
     parser.add_argument('-y_noise_std', type=float, default=0.1)
-    parser.add_argument('-zoom', type=int, default=10)
     parser.add_argument('-lr_kernel', type=float, default=0.01)
     parser.add_argument('-lr_ip', type=float, default=0.1)
     parser.add_argument('-num_epochs', type=int, default=100)
